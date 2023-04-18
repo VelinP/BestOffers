@@ -5,10 +5,11 @@ export const Navbar = ()=>{
 
     <nav className='mainnav'>
         <ul className='mainul'>
-        <Link to href="/">Home</Link>
-        <Link to href="/info">Info</Link>
-        <Link to href="/login">Login</Link>
-        <Link to href="/logout">Logout</Link>
+        <Link to ="/">Home</Link>
+        <Link to ="/register">Register</Link>
+        <Link to ="/info">Info</Link>
+        <Link to ="/login">Login</Link>
+        <Link to ="/logout">Logout</Link>
 
         </ul>
     </nav>

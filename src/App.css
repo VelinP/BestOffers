@@ -66,3 +66,22 @@ body {
   text-align: center;
   
 }
+
+.formdiv{
+  border-radius: 40px;
+  background-color: white;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+  width: auto;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
