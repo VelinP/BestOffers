@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const dbUrl = 'mongodb://127.0.0.1:27017/realestate'
+const dbUrl = 'mongodb://127.0.0.1:27017/reactapptest'
 
 async function initDatabase(){
     mongoose.set('strictQuery', false)
