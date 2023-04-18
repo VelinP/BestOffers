@@ -1,0 +1,68 @@
+
+body { 
+  background: url("https://i.redd.it/2n1iolidrzp91.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+}
+
+.mainnav{
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.90;
+
+ 
+  
+}
+
+.mainul a{
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+  font-weight: 800;
+
+
+}
+
+.mainul a:hover{
+  box-shadow: 2px 2px 2px 2px orange;
+
+}
+
+.mainul{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  
+}
+
+
+.maincontentdiv{
+  display: flex;
+  justify-content: center;  
+  padding: 30px;
+  margin: 100px;
+  margin-left: 40%;
+  margin-right: 40%;
+  background-image: linear-gradient(to right top,red,blue);
+  border-radius: 25px;
+  transition: 0.2s;
+}
+
+.maincontentdiv:hover{
+  
+  box-shadow: 3px 3px 3px 3px;
+}
+
+.footer{
+  position: fixed;
+  left: 60%;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+  
+}
