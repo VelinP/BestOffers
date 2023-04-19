@@ -1,4 +1,4 @@
-import * as authservice from '../services/authservice.js'
+import * as request from '../services/authservice.js'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -9,7 +9,9 @@ export const Register = () =>{
         
         e.preventDefault()
         const { email ,picture, password } = Object.fromEntries(new FormData(e.target))
-        authservice.register(email,picture, password).then(()=> navigate('/'))
+        request.register(email,picture, password).then((data)=> {console.log(data); navigate('/')})
+       
+
 
     }
 

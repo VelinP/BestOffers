@@ -11,7 +11,7 @@ exports.registerpost = async ( req, res) =>{
         
         const { email, picture, password} = req.body
         await authservice.register(email, picture , password)
-
+        res.send({res:"everything is ok 👍"})
     }catch(e){
         console.log(e.message)
     }
@@ -25,7 +25,9 @@ exports.loginpost = async(req,res) =>{
 
     try{
         const [token, id] = await authservice.login(email , password)
-        res.send({token, email, id})
+        const user = await User.findById(id).lean()
+        console.log(user)
+        res.send({token, email, id , picture: user.picture})
 
     }catch(error){
         console.log(error)

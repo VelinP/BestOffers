@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   opacity: 0.90;
+  height: 90px;
 
  
   
@@ -23,6 +24,7 @@ body {
   text-decoration: none;
   transition: 0.5s;
   font-weight: 800;
+  padding-top: 20px;
 
 
 }
@@ -92,5 +94,11 @@ body {
 }
 
 .mainuls li{
-    font-weight: 800;
+  font-weight: 800;
+}
+
+.detailsimg{
+  height:60px;
+  width: 60px;
+  border-radius: 50px;
 }

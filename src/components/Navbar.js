@@ -3,7 +3,7 @@ import { getUser } from '../services/requestservice.js'
 
 export const Navbar = ()=>{
     const user = getUser()
-    
+    console.log(user?.picture);
     
     return(
 
@@ -16,6 +16,7 @@ export const Navbar = ()=>{
         ? 
         
         <>
+        <img className="detailsimg" src={user?.picture} alt="nothing"/>
         <Link to={`/profile/${user.id}`}>Welcome, {user.email}</Link>
         <Link to ="/">Home</Link>
         <Link to ="/info">Info</Link>

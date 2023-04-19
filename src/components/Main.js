@@ -19,7 +19,7 @@ export const Main = () =>{
       <div className="maincontentdiv">
         
         <ul className='mainuls'>
-        {users.map(item => <HomeComp email={item.email} key ={item._id}/>)}
+        {users?.length >0 ? users.map(item => <HomeComp email={item.email} key ={item._id}/>) : "No content 😢"}
         </ul>
       </div>
       </>

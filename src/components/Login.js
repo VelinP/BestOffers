@@ -12,8 +12,7 @@ export const Login = () =>{
     const onsubmit = (e)=>{
         e.preventDefault()
         const { email, password } = Object.fromEntries(new FormData(e.target))
-        request.login(email,password)
-        .then((data)=> {loginfunc(data);navigate('/')})
+        request.login(email,password).then((data)=> {loginfunc(data);navigate('/')})
     }
     
     

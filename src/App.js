@@ -7,7 +7,7 @@ import { Register } from './components/Register';
 import { Login } from './components/Login';
 import { authContext } from './contexts/authcontext';
 import { useLocalStorage } from './hooks/loginhook';
-
+import {Logout} from './components/Logout';
 
 function App() {
   const [authenticate, setauthenticate] = useLocalStorage('auth',{})
@@ -33,6 +33,7 @@ function App() {
       <Route path="/" element={<Main/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/logout" element={<Logout/>}/>
     </Routes>
 
     </authContext.Provider>
