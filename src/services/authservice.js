@@ -9,3 +9,10 @@ export const register = async(email,picture, password) =>{
     }
 }
 
+export const login = async(email , password) =>{
+    try{
+        return request.post("http://localhost:4000/login", {email,password})
+    }catch(e){
+        console.log(e.message)
+    }
+}

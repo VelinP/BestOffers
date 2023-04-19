@@ -2,7 +2,6 @@ export const get = async (url) =>{
     try{
         const data = await fetch(url);
         const processeddata = await data.json()
-        console.log(processeddata)
         return processeddata
 
     }catch(e){
@@ -20,3 +19,16 @@ export const post = async(url,data ) =>{
     }
 }
 
+export const getUser = () =>{
+    let serializeduser = localStorage.getItem('auth')
+
+    if(serializeduser){
+        let user = JSON.parse(serializeduser)
+        return user
+    }
+
+}
+
+export const GetToken = ()=>{
+    return getUser()?.accessToken
+}

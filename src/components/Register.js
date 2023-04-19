@@ -1,12 +1,15 @@
 import * as authservice from '../services/authservice.js'
+import { useNavigate } from 'react-router-dom'
+
 
 export const Register = () =>{
+    const navigate = useNavigate()
+    
     const onsubmit = (e) =>{
+        
         e.preventDefault()
         const { email ,picture, password } = Object.fromEntries(new FormData(e.target))
-        debugger;
-        console.log(email,picture,password)
-        authservice.register(email,picture, password).then((content)=> console.log(content))
+        authservice.register(email,picture, password).then(()=> navigate('/'))
 
     }
 
@@ -41,7 +44,7 @@ export const Register = () =>{
 
                 <p className="field">
                     <span>
-                    If you already have profile click <a className="spanremove"  href="/register">here</a>
+                    If you have profile click <a className="spanremove"  href="/login">here</a>
                     </span>
                 </p>
             </div>

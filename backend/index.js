@@ -18,6 +18,7 @@ app.use(cors(options));
 
 app.get('/', maincontroller.homeget)
 app.post('/register', maincontroller.registerpost)
+app.post('/login', maincontroller.loginpost)
 
 
 
