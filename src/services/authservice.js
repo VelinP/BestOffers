@@ -1,9 +1,8 @@
 import * as request from './requestservice.js'
 
-export const register = async(email, password) =>{
+export const register = async(email,picture, password) =>{
     try{
-        debugger;
-        return request.post("http://localhost:4000/register", {email,password})
+        return request.post("http://localhost:4000/register", {email,picture, password})
 
     }catch(err){
         console.log(err);
