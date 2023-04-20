@@ -3,7 +3,6 @@ import { getUser } from '../services/requestservice.js'
 
 export const Navbar = ()=>{
     const user = getUser()
-    console.log(user?.picture);
     
     return(
 
@@ -20,7 +19,11 @@ export const Navbar = ()=>{
         <Link to={`/profile/${user.id}`}>Welcome, {user.email}</Link>
         <Link to ="/">Home</Link>
         <Link to ="/info">Info</Link>
-        <Link to ="/logout">Logout</Link> 
+        <Link to ="/logout">Logout</Link>
+        <Link to ="/offers">All Offers</Link>
+        <Link to ="/create">Create</Link>
+
+ 
         </>
         : 
         <>
