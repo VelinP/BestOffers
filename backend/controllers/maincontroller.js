@@ -1,4 +1,5 @@
 const User = require('../models/User.js')
+const Offer = require('../models/Offer.js')
 const authservice = require('../utils/authservice.js')
 
 exports.homeget = async (req,res) =>{
@@ -33,4 +34,16 @@ exports.loginpost = async(req,res) =>{
         console.log(error)
     }
 
+}
+
+exports.createpost = async(req,res)=>{
+    try{
+        const {offername ,location, type, price, picture , description} = req.body;
+        await Offer.create({offername ,location, type, price, picture , description})
+        res.send({"Offer successful with information ->":[offername ,location, type, price, picture , description]})
+
+    }catch(e){
+        console.log(e.message)
+        console.log("Something went wrong with create req")
+    }
 }

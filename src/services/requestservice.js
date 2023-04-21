@@ -32,3 +32,10 @@ export const getUser = () =>{
 export const GetToken = ()=>{
     return getUser()?.accessToken
 }
+
+export const postauth = async(url,data ) =>{
+    let token = GetToken()
+    const readydata = await fetch(url, {method:'POST', headers:{'Content-Type': "application/json", 'X-Authorization': token}, body: JSON.stringify(data)})
+    return readydata.json()
+
+}

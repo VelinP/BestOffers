@@ -91,6 +91,25 @@ body {
   margin-top: 10%;
   padding-top: 30px;
   padding-bottom: 30px;
+  gap: 4px;
+  transition: 1s;
+}
+
+.formdiv input:hover{
+  border: solid black 2px;
+  font-weight:bold;
+}
+
+.formdiv textarea:hover{
+  border: solid black 1px;
+  font-weight:bold;
+}
+
+
+.formdiv inpput{
+  border: solid white;
+  border-radius: 10px;
+
 }
 
 .centeredh1{

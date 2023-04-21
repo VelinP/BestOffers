@@ -19,7 +19,7 @@ app.use(cors(options));
 app.get('/', maincontroller.homeget)
 app.post('/register', maincontroller.registerpost)
 app.post('/login', maincontroller.loginpost)
-
+app.post('/create', maincontroller.createpost)
 
 
 databaseinit().then(()=> app.listen(port, ()=> {console.log(`Server is up and running on port ${port}`)}))

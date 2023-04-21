@@ -16,3 +16,12 @@ export const login = async(email , password) =>{
         console.log(e.message)
     }
 }
+
+
+export const create = async(offername ,location, type, price, picture , description)=>{
+    try{
+        return request.postauth("http://localhost:4000/create", {offername ,location, type, price, picture , description})
+    }catch(e){
+        console.log(e.message)
+    }
+}
