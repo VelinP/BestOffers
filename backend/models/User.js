@@ -1,4 +1,5 @@
 const {Schema, model} = require('mongoose')
+const mongoose = require('mongoose')
 
 
 const userSchema = new Schema({
@@ -15,7 +16,13 @@ const userSchema = new Schema({
     picture:{
         type:String,
         required:[true, 'Profile picture is required']
-    }
+    },
+
+    offers:[{
+        type:mongoose.Types.ObjectId,
+        ref: 'Offer'
+        
+    }],
 })
 
 

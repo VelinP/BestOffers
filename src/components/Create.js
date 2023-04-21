@@ -1,10 +1,19 @@
 import { create } from "../services/authservice";
+import { useNavigate } from "react-router-dom";
+import { getUser } from "../services/requestservice";
+
 
 export const Create = () =>{
+    const navigate = useNavigate()
+    const user = getUser()
+    const id = user.id
+
+    console.log(id)
+
     const onsubmit =(event) =>{
         event.preventDefault();
         const { offername ,location, type, price, picture , description} = Object.fromEntries(new FormData(event.target));
-        create(offername ,location, type, price, picture , description).then((data)=> console.log(data));
+        create(offername ,location, type, price, picture , description, id).then(()=> navigate('/offers'));
     }
     
     

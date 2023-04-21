@@ -38,8 +38,12 @@ exports.loginpost = async(req,res) =>{
 
 exports.createpost = async(req,res)=>{
     try{
-        const {offername ,location, type, price, picture , description} = req.body;
-        await Offer.create({offername ,location, type, price, picture , description})
+        const {offername ,location, type, price, picture , description, id} = req.body;
+        const user = await User.findById(id)
+        const offer = await Offer.create({offername ,location, type, price, picture , description})
+
+        user.offers.push(offer)
+        user.save()
         res.send({"Offer successful with information ->":[offername ,location, type, price, picture , description]})
 
     }catch(e){
@@ -47,3 +51,15 @@ exports.createpost = async(req,res)=>{
         console.log("Something went wrong with create req")
     }
 }
+
+exports.profilegetcards = async (req,res)=>{
+    try{
+        const userId = req.params.userId
+        const user = await User.findById(userId).populate('offers').lean()
+        const {email , offer, picture , offers  } = user
+        res.send({userId, picture , offer , email, offers})
+    }catch(e){
+        console.log(e.message)
+    }
+}
+

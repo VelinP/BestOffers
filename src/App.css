@@ -127,3 +127,45 @@ body {
   border-radius: 50px;
   
 }
+
+
+
+
+
+
+
+
+
+
+
+.profilegriddiv{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 100px;
+  justify-items: center;
+  align-items: center;
+}
+
+
+
+.homepagecardimg{
+  height: 80%;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+
+}
+
+.homepagecardheader{
+  height: 500px;
+  width: 500px;
+  align-items: center;
+  background-color: salmon;
+  border-radius: 20px;
+
+}
+
+.profileh1{
+  text-align: center;
+  background-color: salmon;
+}

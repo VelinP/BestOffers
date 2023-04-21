@@ -9,20 +9,23 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 
-const databaseinit = require('./config/dbconfig.js')
-const maincontroller = require('./controllers/maincontroller.js')
+const databaseinit = require('./config/dbconfig.js');
+const maincontroller = require('./controllers/maincontroller.js');
 
 
 app.use(cors(options));
 
 
-app.get('/', maincontroller.homeget)
-app.post('/register', maincontroller.registerpost)
-app.post('/login', maincontroller.loginpost)
-app.post('/create', maincontroller.createpost)
+app.get('/', maincontroller.homeget);
+app.get('/profile/:userId', maincontroller.profilegetcards)
 
 
-databaseinit().then(()=> app.listen(port, ()=> {console.log(`Server is up and running on port ${port}`)}))
+app.post('/register', maincontroller.registerpost);
+app.post('/login', maincontroller.loginpost);
+app.post('/create', maincontroller.createpost);
+
+
+databaseinit().then(()=> app.listen(port, ()=> {console.log(`Server is up and running on port ${port}`)}));
 
 
 

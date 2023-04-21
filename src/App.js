@@ -7,8 +7,9 @@ import { Register } from './components/Register';
 import { Login } from './components/Login';
 import { authContext } from './contexts/authcontext';
 import { useLocalStorage } from './hooks/loginhook';
-// import {Logout} from './components/Logout';
+import {Logout} from './components/Logout';
 import { Create } from './components/Create';
+import { Profile } from './components/Profile';
 
 function App() {
   const [authenticate, setauthenticate] = useLocalStorage('auth',{})
@@ -34,8 +35,9 @@ function App() {
       <Route path="/" element={<Main/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/login" element={<Login/>}/>
-      {/* <Route path="/logout" element={<Logout/>}/> */}
+      <Route path="/logout" element={<Logout/>}/>
       <Route path="/create" element ={<Create/>}/>
+      <Route path="/profile/:userId" element={<Profile/>}/>
     </Routes>
 
     </authContext.Provider>

@@ -18,9 +18,9 @@ export const login = async(email , password) =>{
 }
 
 
-export const create = async(offername ,location, type, price, picture , description)=>{
+export const create = async(offername ,location, type, price, picture , description, id)=>{
     try{
-        return request.postauth("http://localhost:4000/create", {offername ,location, type, price, picture , description})
+        return request.postauth("http://localhost:4000/create", {offername ,location, type, price, picture , description, id})
     }catch(e){
         console.log(e.message)
     }
