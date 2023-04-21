@@ -6,7 +6,6 @@ export const Card = (props) =>{
     <div className="homepagecardheader">
         <img className="homepagecardimg" src={props.info.picture} alt='nothing'></img>
         <div className="homepagecardbody">
-            {/* {props.card.name} */}
             <p style={{justifyContent:"center", display:"flex"}}>Offer Name:</p>
             <p style={{justifyContent:"center", display:"flex"}}>{props.info.offername} </p>
         </div>

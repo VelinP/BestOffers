@@ -10,6 +10,7 @@ import { useLocalStorage } from './hooks/loginhook';
 import {Logout} from './components/Logout';
 import { Create } from './components/Create';
 import { Profile } from './components/Profile';
+import { ProfileCards } from './components/ProfileCards';
 
 function App() {
   const [authenticate, setauthenticate] = useLocalStorage('auth',{})
@@ -38,6 +39,7 @@ function App() {
       <Route path="/logout" element={<Logout/>}/>
       <Route path="/create" element ={<Create/>}/>
       <Route path="/profile/:userId" element={<Profile/>}/>
+      <Route path="/profile/:userId/offers" element={<ProfileCards/>}/>
     </Routes>
 
     </authContext.Provider>
