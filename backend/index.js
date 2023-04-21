@@ -3,14 +3,18 @@ const cors = require('cors');
 const app = express();
 const options = {origin:'*', credentials: true, optionSuccessStatus:200};
 const port = 4000;
+const databaseinit = require('./config/dbconfig.js');
+const maincontroller = require('./controllers/maincontroller.js');
+
+
+
 
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 
-const databaseinit = require('./config/dbconfig.js');
-const maincontroller = require('./controllers/maincontroller.js');
+
 
 
 app.use(cors(options));

@@ -1,37 +1,47 @@
 import { useParams } from "react-router-dom";
-import { getUser } from "../services/requestservice";
 import { useState, useEffect } from "react";
 import * as request from '../services/requestservice.js'
-import { Card } from "./Card";
 import { Link } from "react-router-dom";
+import { Spinner } from "./Spinner.js";
+import {Nopage} from './Nopage.js'
+import { getUser } from "../services/requestservice.js";
 
 export const Profile = () =>{
-    const {user} = getUser()
     const {userId} = useParams()
-
+    const user = getUser()
     const [usercards, setCards] = useState({});
+    const [boolspinner,setboolspinner] = useState(true)
 
-    useEffect(()=> {request.get(`http://localhost:4000/profile/${userId}`).then((data)=> setCards(data))},[userId])
-    console.log(usercards)
+
+    useEffect(()=> {request.get(`http://localhost:4000/profile/${userId}`).then((data)=> {setCards(data);setboolspinner(false)})},[userId])
+    console.log(userId)
 
     return (
-        <>
-        <p className="profileh1">Welcome, {usercards.email}</p>
-
-        <div className="profilediv">
-        <img className="profileimg" src={usercards.picture} alt="nothing"/>
-        <ul className="profileul">
-            <Link className="profileLink" to={`/profile/${usercards.userId}/settings`}>Profile Settings</Link>
-            <Link className="profileLink" to={`/profile/${usercards.userId}/offers`}>Your Offers</Link>
-
-        </ul>
-        </div>
+       <>
+       
+        {
+            user? <>
+            <p className="profileh1">Welcome, {usercards?.email}</p>
+            
+    
+            <div className="profilediv">
+            <img className="profileimg" src={usercards?.picture} alt="nothing"/>
+            <ul className="profileul">
+            {boolspinner && <Spinner/>}
+                
+                <Link className="profileLink" to={`/profile/${usercards?.userId}/settings`}>Profile Settings</Link>
+                <Link className="profileLink" to={`/profile/${usercards?.userId}/offers`}>Your Offers</Link>
+            </ul>
+            </div>
+            </>
+            
+            :
+            <Nopage/>
+        
+        
+        }
         </>
-
     )
 }
 
 
-{/* <div className="profilegriddiv">
-    {usercards.offers?.map(card => <Card key={card._id} info={card}/>)}
-</div> */}

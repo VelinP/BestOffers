@@ -11,6 +11,8 @@ import {Logout} from './components/Logout';
 import { Create } from './components/Create';
 import { Profile } from './components/Profile';
 import { ProfileCards } from './components/ProfileCards';
+import { Nopage } from './components/Nopage';
+
 
 function App() {
   const [authenticate, setauthenticate] = useLocalStorage('auth',{})
@@ -40,6 +42,7 @@ function App() {
       <Route path="/create" element ={<Create/>}/>
       <Route path="/profile/:userId" element={<Profile/>}/>
       <Route path="/profile/:userId/offers" element={<ProfileCards/>}/>
+      <Route path="/404" element={<Nopage/>}/>
     </Routes>
 
     </authContext.Provider>

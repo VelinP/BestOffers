@@ -223,6 +223,9 @@ body {
   border-color: white transparent white transparent;
   border-radius: 50%;
   animation: spin 1.3s linear infinite;
+  position: absolute;
+  top: 40%;
+  
 }
 
 @keyframes spin {
@@ -232,3 +235,4 @@ body {
 }
 
 /* spinner css */
+
