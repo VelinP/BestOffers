@@ -24,26 +24,31 @@ exports.register = async (email, picture,  password) =>{
 }
 
 exports.login = async(email, password) =>{
-    const user = await this.getUserByEmail(email)
+    try{
+        const user = await this.getUserByEmail(email);
 
-    if(!user){
-        throw new Error('Invalid user')
-    }
+        if(!user){
+            throw new Error("Fuck off");
+        }
 
-    const isvalid = await bcrypt.compare(password, user.password)
+        const isvalid = await bcrypt.compare(password, user.password);
+        
+        if(!isvalid){
+            throw new Error('Invalid token')
+        }
+        
     
-    if(!isvalid){
-        throw new Error('Invalid token')
-    }
-    
- 
 
-    const payload = {
-        _id: user._id,
-        email
-    }
+        const payload = {
+            _id: user._id,
+            email
+        }
 
-    const token = await jwt.sign(payload, 'itsasecret')
-    return [token, user._id]
+        const token = await jwt.sign(payload, 'itsasecret')
+        return [token, user._id]
+    }
+    catch(e){
+        console.log(e.message)
+    }
 
 }

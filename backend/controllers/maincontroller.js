@@ -3,8 +3,12 @@ const Offer = require('../models/Offer.js')
 const authservice = require('../utils/authservice.js')
 
 exports.homeget = async (req,res) =>{
-    const users = await User.find().lean()
-    res.send(users)
+    try{
+        const users = await User.find().lean()
+        res.send(users)
+    }catch(e){
+        console.log(e.message)
+    }
 }
 
 exports.registerpost = async ( req, res) =>{
@@ -12,7 +16,6 @@ exports.registerpost = async ( req, res) =>{
         
         const { email, picture, password} = req.body
         await authservice.register(email, picture , password)
-        res.send({res:"everything is ok 👍"})
     }catch(e){
         console.log(e.message)
     }
@@ -22,16 +25,20 @@ exports.registerpost = async ( req, res) =>{
 }
 
 exports.loginpost = async(req,res) =>{
-    const { email, password} = req.body
 
     try{
+        const { email, password} = req.body
         const [token, id] = await authservice.login(email , password)
-        const user = await User.findById(id).lean()
-        console.log(user)
-        res.send({token, email, id , picture: user.picture})
+        
+        if(token && id){
+            const user = await User.findById(id).lean()
+            res.send({token, email, id , picture: user.picture})
+        }else(
+            console.log("unsuccessful")
+        )
 
     }catch(error){
-        console.log(error)
+        console.log(error.message)
     }
 
 }
