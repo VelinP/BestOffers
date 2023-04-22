@@ -8,8 +8,6 @@ export const Create = () =>{
     const user = getUser()
     const id = user.id
 
-    console.log(id)
-
     const onsubmit =(event) =>{
         event.preventDefault();
         const { offername ,location, type, price, picture , description} = Object.fromEntries(new FormData(event.target));

@@ -13,15 +13,9 @@ export const Profile = () =>{
     const [usercards, setCards] = useState({});
     const [boolspinner,setboolspinner] = useState(true)
 
-
     useEffect(()=> {request.get(`http://localhost:4000/profile/${user?.id}`).then((data)=> {setCards(data);setboolspinner(false)})},[userId])
 
-    console.log(user?.id)
-    console.log(usercards.useId)
-    
     return (
-       <>
-       {user?.id && user?.id === usercards?.userId ? 
         <>
         <p className="profileh1">Welcome, {usercards?.email}</p>
         
@@ -36,12 +30,6 @@ export const Profile = () =>{
         </ul>
         </div>
         </>
-        : 
-
-        <Nopage/>
-            }
-       
-       </>
     )
 }
 

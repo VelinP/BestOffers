@@ -11,7 +11,6 @@ export const ProfileCards = () =>{
     const [usercards, setCards] = useState({});
 
     useEffect(()=> {request.get(`http://localhost:4000/profile/${userId}`).then((data)=> {setCards(data);setboolspinner(false)})},[userId])
-    console.log(usercards)
     
     return(
         <div className="profilegriddiv">

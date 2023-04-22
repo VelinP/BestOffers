@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom'
 import { getUser } from '../services/requestservice.js'
 
-export const Navbar = ()=>{
+
+import { useContext } from 'react'
+import { authContext } from '../contexts/authcontext'
+
+
+
+export const Navbar = (props)=>{
     const user = getUser()
-    
+
+
     return(
 
     <nav className='mainnav'>
@@ -11,7 +18,7 @@ export const Navbar = ()=>{
         
         
         
-        {user 
+         {user 
         ? 
         
         <>
@@ -31,8 +38,8 @@ export const Navbar = ()=>{
         <Link to ="/login">Login</Link>
         <Link to ="/register">Register</Link>
         </>
-        }
-        
+        } 
+         
        
        
         

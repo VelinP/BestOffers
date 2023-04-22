@@ -5,15 +5,9 @@ import { authContext } from '../contexts/authcontext'
 
 export const Login = () =>{
     const navigate = useNavigate()
+    const { loginfunc } = useContext(authContext)
 
-    const loginfunc = (data)=>{
-        debugger;
-        if(data){
-            localStorage.setItem("auth" , JSON.stringify(data))
 
-        }
-            
-      }
 
     const onsubmit = (e)=>{
         e.preventDefault()
