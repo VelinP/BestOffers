@@ -70,3 +70,10 @@ exports.profilegetcards = async (req,res)=>{
     }
 }
 
+exports.getLogout = async (req,res) =>{
+    try{
+        res.send({x:"Logout successful"})
+    }catch(e){
+        console.log(e.message)
+    }
+}

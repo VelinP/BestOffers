@@ -25,3 +25,15 @@ export const create = async(offername ,location, type, price, picture , descript
         console.log(e.message)
     }
 }
+
+export const logout = async()=>{
+    try{
+        const token = request.GetToken()
+        const data = await fetch('http://localhost:4000/logout/', {headers:{'X-Authorization': token}})
+        return data
+    }
+    catch(err){
+        console.log(err)
+    }
+    
+}

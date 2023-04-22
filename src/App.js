@@ -36,17 +36,19 @@ function App() {
     <Navbar user={authenticate}/>
 
     <Routes>
-
+      {/* Guarded routes */}
+      
       <Route element={<PrivateRoute/>}>
         <Route path="/profile/:userId" element={<Profile/>}/>
         <Route path="/profile/:userId/offers" element={<ProfileCards/>}/>
         <Route path="/create" element ={<Create/>}/>
+        <Route path="/logout" element={<Logout/>}/>
       </Route>
+       {/* Guarded routes */}
 
       <Route path="/" element={<Main/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/login" element={<Login/>}/>
-      <Route path="/logout" element={<Logout/>}/>
       <Route path="/404" element={<Nopage/>}/>
     </Routes>
 
