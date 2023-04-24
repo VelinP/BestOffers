@@ -5,13 +5,20 @@ import { Link } from "react-router-dom";
 import { Spinner } from "./Spinner.js";
 import {Nopage} from './Nopage.js'
 import { getUser } from "../services/requestservice.js";
+import { EditForm } from "./EditForm.js";
 
 export const Profile = () =>{
     const {userId} = useParams()
     const user = getUser()
 
     const [usercards, setCards] = useState({});
-    const [boolspinner,setboolspinner] = useState(true)
+    const [boolspinner,setboolspinner] = useState(true);
+    const [isClicked, setisClicked] = useState(false)
+    
+    const editClick = ()=>{
+        setisClicked(true)
+    }
+
 
     useEffect(()=> {request.get(`http://localhost:4000/profile/${user?.id}`).then((data)=> {setCards(data);setboolspinner(false)})},[userId])
 
@@ -26,13 +33,23 @@ export const Profile = () =>{
         <ul className="profileul">
         <p className="profileh1">{usercards?.email}</p>
         {boolspinner && <Spinner/>}
+        {isClicked 
+            ?
+            <EditForm id={userId} setIsClicked={setisClicked} />
+            :
+            <>
+            <Link className="profileLink" to={`/profile/${usercards?.email}/settings`}>Profile Settings</Link>
+            <button className="profileLink" onClick={editClick}>Your Offers</button>
+            </>
+            }
+
              
-            <Link className="profileLink" to={`/profile/${usercards?.userId}/settings`}>Profile Settings</Link>
-            <Link className="profileLink" to={`/profile/${usercards?.userId}/offers`}>Your Offers</Link>
+            
         </ul>
         </div>
         </>
     )
 }
+
 
 

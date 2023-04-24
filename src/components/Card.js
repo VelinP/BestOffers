@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
+
 export const Card = (props) =>{
-   
     return(
     <div className="homepagecardheader">
         <img className="homepagecardimg" src={props.info.picture} alt='nothing'></img>
