@@ -18,7 +18,12 @@ function App() {
   const [authenticate, setauthenticate] = useLocalStorage('auth',{})
   
   const loginfunc = (data)=>{
-    setauthenticate(data)
+      if(data){
+        setauthenticate(data)
+
+      }else{
+        console.log("fix ur server")
+      }
   }
 
   const logoutfunc = ()=>{
@@ -37,7 +42,7 @@ function App() {
 
     <Routes>
       {/* Guarded routes */}
-      
+
       <Route element={<PrivateRoute/>}>
         <Route path="/profile/:userId" element={<Profile/>}/>
         <Route path="/profile/:userId/offers" element={<ProfileCards/>}/>

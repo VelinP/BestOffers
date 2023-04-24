@@ -162,40 +162,52 @@ body {
   align-items: center;
   border-radius: 20px;
   background-color: salmon;
+  transition: 0.3s;
+
+}
+
+.homepagecardheader:hover{
+  box-shadow: 0 0 30px wheat,0 0 30px red;
 
 }
 
 .profileh1{
   text-align: center;
   font-size: 60px;
-  
+  color: white;  
 
 }
 
 .profilediv{
-  background-color: orange;
+  background-color: #282c34;
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 30px;
   position: relative;
+  height: 600px;
+  border-radius: 20px;
 }
 
 .profileimg{
-  height: 500px;
-  width: 40%;
+  overflow: hidden;
+  width: 50%;
+  aspect-ratio: 16/9;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .profileul{
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: -12%;
   list-style-type: none;
 }
 
 .profileLink{
   font-size: 60px;
   text-decoration: none;
-  color: black;
+  color: white;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -236,3 +248,22 @@ body {
 
 /* spinner css */
 
+
+.profileLink{
+  transition: 0.2s;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.profileLink:hover{
+  box-shadow: 0 0 30px wheat,0 0 30px red;
+  background-color: orange;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.submitbutton{
+  margin-top: -14px;
+
+}

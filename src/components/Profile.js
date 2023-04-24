@@ -17,14 +17,16 @@ export const Profile = () =>{
 
     return (
         <>
-        <p className="profileh1">Welcome, {usercards?.email}</p>
+        
         
 
         <div className="profilediv">
         <img className="profileimg" src={usercards?.picture} alt="nothing"/>
+        
         <ul className="profileul">
+        <p className="profileh1">{usercards?.email}</p>
         {boolspinner && <Spinner/>}
-            
+             
             <Link className="profileLink" to={`/profile/${usercards?.userId}/settings`}>Profile Settings</Link>
             <Link className="profileLink" to={`/profile/${usercards?.userId}/offers`}>Your Offers</Link>
         </ul>
