@@ -16,6 +16,7 @@ exports.registerpost = async ( req, res) =>{
         
         const { email, picture, password} = req.body
         await authservice.register(email, picture , password)
+        res.send({response:'🤙'})
     }catch(e){
         console.log(e.message)
     }

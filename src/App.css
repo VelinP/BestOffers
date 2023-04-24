@@ -211,6 +211,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  border: none;
+  background-color:inherit;
+
 }
 
 .loader {
@@ -263,7 +266,7 @@ body {
   border-radius: 10px;
 }
 
-.submitbutton{
+.submitbuttonedit{
   margin-top: -14px;
 
 }

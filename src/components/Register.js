@@ -9,8 +9,7 @@ export const Register = () =>{
         
         e.preventDefault()
         const { email ,picture, password } = Object.fromEntries(new FormData(e.target))
-        request.register(email,picture, password).then((data)=> {console.log(data); navigate('/')})
-       
+        request.register(email,picture, password).then(()=> {navigate('/')})
 
 
     }
