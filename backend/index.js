@@ -21,7 +21,7 @@ app.use(cors(options));
 
 
 app.get('/', maincontroller.homeget);
-app.get('/profile/:userId', maincontroller.profilegetcards)
+app.get('/profile/:useremail', maincontroller.profilegetcards)
 app.get('/logout', maincontroller.getLogout)
 
 app.post('/register', maincontroller.registerpost);

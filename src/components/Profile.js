@@ -3,12 +3,11 @@ import { useState, useEffect } from "react";
 import * as request from '../services/requestservice.js'
 import { Link } from "react-router-dom";
 import { Spinner } from "./Spinner.js";
-import {Nopage} from './Nopage.js'
 import { getUser } from "../services/requestservice.js";
 import { EditForm } from "./EditForm.js";
 
 export const Profile = () =>{
-    const {userId} = useParams()
+    const {useremail} = useParams()
     const user = getUser()
 
     const [usercards, setCards] = useState({});
@@ -20,7 +19,7 @@ export const Profile = () =>{
     }
 
 
-    useEffect(()=> {request.get(`http://localhost:4000/profile/${user?.id}`).then((data)=> {setCards(data);setboolspinner(false)})},[userId])
+    useEffect(()=> {request.get(`http://localhost:4000/profile/${useremail}`).then((data)=> {setCards(data);setboolspinner(false)})},[useremail])
 
     return (
         <>
@@ -35,11 +34,11 @@ export const Profile = () =>{
         {boolspinner && <Spinner/>}
         {isClicked 
             ?
-            <EditForm id={userId} setIsClicked={setisClicked} />
+            <EditForm user = {user} setIsClicked={setisClicked} />
             :
             <>
-            <Link className="profileLink" to={`/profile/${usercards?.email}/settings`}>Profile Settings</Link>
-            <button className="profileLink" onClick={editClick}>Your Offers</button>
+            <Link className="profileLink" to={`/profile/${usercards.email}/offers`}>Your offers</Link>
+            <button className="profileLink" onClick={editClick}>Edit Profile</button>
             </>
             }
 

@@ -44,8 +44,8 @@ function App() {
       {/* Guarded routes */}
 
       <Route element={<PrivateRoute/>}>
-        <Route path="/profile/:userId" element={<Profile/>}/>
-        <Route path="/profile/:userId/offers" element={<ProfileCards/>}/>
+        <Route path="/profile/:useremail" element={<Profile/>}/>
+        <Route path="/profile/:useremail/offers" element={<ProfileCards/>}/>
         <Route path="/create" element ={<Create/>}/>
         <Route path="/logout" element={<Logout/>}/>
       </Route>

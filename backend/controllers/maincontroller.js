@@ -61,9 +61,11 @@ exports.createpost = async(req,res)=>{
 
 exports.profilegetcards = async (req,res)=>{
     try{
-        const userId = req.params.userId
-        const user = await User.findById(userId).populate('offers').lean()
+        const useremail = req.params.useremail
+        const user = await authservice.getUserByEmail(useremail).populate('offers').lean()
+        const userId = (user._id.toString())
         const {email , offer, picture , offers  } = user
+
         res.send({userId, picture , offer , email, offers})
     }catch(e){
         console.log(e.message)

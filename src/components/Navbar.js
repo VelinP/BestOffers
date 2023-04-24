@@ -2,11 +2,6 @@ import { Link } from 'react-router-dom'
 import { getUser } from '../services/requestservice.js'
 
 
-import { useContext } from 'react'
-import { authContext } from '../contexts/authcontext'
-
-
-
 export const Navbar = (props)=>{
     const user = getUser()
 
@@ -23,7 +18,7 @@ export const Navbar = (props)=>{
         
         <>
         <img className="detailsimg" src={user?.picture} alt="nothing"/>
-        <Link to={`/profile/${user.id}`}>Welcome, {user.email}</Link>
+        <Link to={`/profile/${user.email}`}>Welcome, {user.email}</Link>
         <Link to ="/">Home</Link>
         <Link to ="/info">Info</Link>
         <Link to ="/logout">Logout</Link>

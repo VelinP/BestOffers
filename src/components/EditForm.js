@@ -1,10 +1,15 @@
 
 export const EditForm = (props) =>{
     console.log(props)
-    const { setIsClicked } = props
+    const { setIsClicked ,user , id} = props
 
     const setIsCLickedFalse = () =>{
         setIsClicked(false)
+    }
+
+    const onsubmit = (e)=>{
+        e.preventDefault()
+        console.log('submitted')
     }
 
     return(
@@ -19,20 +24,23 @@ export const EditForm = (props) =>{
                     id="email"
                     name="email"
                     placeholder="Nudash@abv.bg"
+                    defaultValue= {user.email}
                 />
 
                 <label htmlFor="profilepicture">Profile Picture:</label>
-                <input className="buttons" type="picture" name="picture" id="picture" placeholder='Select your profile picture'/>
+                <input className="buttons" type="picture" name="picture" id="picture" defaultValue ={user.picture} placeholder='Select your profile picture'/>
 
 
                 <label htmlFor="pass">Password:</label>
-                <input className="buttons" type="password" name="password" id="register-password" placeholder='Password'/>
+                <input className="buttons" type="password" name="password" id="register-password" defaultValue={user.password} placeholder='Enter a new password'/>
 
                 
                 <label htmlFor="con-pass">Confirm Password:</label>
-                <input className="buttons" type="password" name="repass" id="repass" placeholder='Password'/>
+                <input className="buttons" type="password" name="repass" id="repass" placeholder='Enter a new password'/>
                 
                 <button onClick={setIsCLickedFalse}>X</button>
+                <button onClick={onsubmit}>Edit</button>
+
             </div>
         </form>
 

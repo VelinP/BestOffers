@@ -5,12 +5,12 @@ import { Card } from "./Card";
 import { Spinner } from "./Spinner";
 
 export const ProfileCards = () =>{
-    const {userId} = useParams()
+    const {useremail} = useParams()
     const [boolspinner,setboolspinner] = useState(true)
 
     const [usercards, setCards] = useState({});
 
-    useEffect(()=> {request.get(`http://localhost:4000/profile/${userId}`).then((data)=> {setCards(data);setboolspinner(false)})},[userId])
+    useEffect(()=> {request.get(`http://localhost:4000/profile/${useremail}`).then((data)=> {setCards(data);setboolspinner(false)})},[useremail])
     
     return(
         <div className="profilegriddiv">
