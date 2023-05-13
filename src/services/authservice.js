@@ -37,3 +37,13 @@ export const logout = async()=>{
     }
     
 }
+
+export const edit = async (email, picture, password,id) =>{
+    try{
+        return request.put(`http://localhost:4000/profile/${email}/edit`, {picture, password, id})
+
+    }catch(e){
+        console.log(e)
+
+}
+}

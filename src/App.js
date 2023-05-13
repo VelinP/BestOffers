@@ -36,7 +36,7 @@ function App() {
     <div className="App">
 
 
-    <authContext.Provider value={{loginfunc,logoutfunc, user:authenticate}}>
+    <authContext.Provider value={{loginfunc,logoutfunc, user:authenticate, setauthenticate}}>
     
     <Navbar user={authenticate}/>
 

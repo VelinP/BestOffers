@@ -22,31 +22,37 @@ export const Profile = () =>{
     useEffect(()=> {request.get(`http://localhost:4000/profile/${useremail}`).then((data)=> {setCards(data);setboolspinner(false)})},[useremail])
 
     return (
-        <>
         
         
-
+    <div className="profilecontainer">
         <div className="profilediv">
-        <img className="profileimg" src={usercards?.picture} alt="nothing"/>
-        
-        <ul className="profileul">
-        <p className="profileh1">{usercards?.email}</p>
-        {boolspinner && <Spinner/>}
-        {isClicked 
-            ?
-            <EditForm user = {user} setIsClicked={setisClicked} />
-            :
-            <>
-            <Link className="profileLink" to={`/profile/${usercards.email}/offers`}>Your offers</Link>
-            <button className="profileLink" onClick={editClick}>Edit Profile</button>
-            </>
-            }
-
-             
             
-        </ul>
+            <div className="imagediv">
+                <img className="profileimg" src={usercards?.picture} alt="nothing"/>
+            </div>
+
+            <div className="infodiv">
+
+                <div>
+                
+                {boolspinner && <Spinner/>}
+                {isClicked 
+                    ?
+                    <EditForm user = {user} setUser={setCards} setIsClicked={setisClicked} />
+                    :
+                    <>
+                    <p className="profileh1">{usercards?.email}</p>
+                    <div className="buttonsdiv">
+                    <Link className="profileLink" to={`/profile/${usercards.email}/offers`}>Your offers</Link>
+                    <button className="profileLink" onClick={editClick}>Edit Profile</button>
+                    </div>
+                    </>
+                }
+                </div>
+
+            </div>    
         </div>
-        </>
+    </div>
     )
 }
 

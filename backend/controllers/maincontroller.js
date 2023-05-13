@@ -1,6 +1,7 @@
 const User = require('../models/User.js')
 const Offer = require('../models/Offer.js')
 const authservice = require('../utils/authservice.js')
+const bcrypt = require('bcrypt')
 
 exports.homeget = async (req,res) =>{
     try{
@@ -64,6 +65,7 @@ exports.profilegetcards = async (req,res)=>{
     try{
         const useremail = req.params.useremail
         const user = await authservice.getUserByEmail(useremail).populate('offers').lean()
+
         const userId = (user._id.toString())
         const {email , offer, picture , offers  } = user
 
@@ -78,5 +80,17 @@ exports.getLogout = async (req,res) =>{
         res.send({x:"Logout successful"})
     }catch(e){
         console.log(e.message)
+    }
+}
+
+exports.putEdit = async(req,res) =>{
+    try{
+        const { picture , password, id} = req.body
+
+        const hashed_pw = await bcrypt.hash(password,10);
+        const user = await User.findByIdAndUpdate(id, {picture, password:hashed_pw})
+        res.send({user})
+    }catch(e){
+        console.log(e)
     }
 }

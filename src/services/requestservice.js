@@ -39,3 +39,9 @@ export const postauth = async(url,data ) =>{
     return readydata.json()
 
 }
+
+export const put = async(url,data) =>{
+    let token = GetToken()
+    const readydata = await fetch(url, {method:'PUT', headers:{'Content-Type': "application/json", 'X-Authorization': token}, body: JSON.stringify(data)})
+    return readydata.json()
+}

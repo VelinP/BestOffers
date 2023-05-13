@@ -1,6 +1,6 @@
 
 body { 
-  background: url("https://www.thesun.co.uk/wp-content/uploads/2017/04/nintchdbpict000318388569.jpg") no-repeat center center fixed; 
+  background: url("https://static.vecteezy.com/system/resources/previews/001/542/636/original/fashion-clothes-store-background-free-vector.jpg") no-repeat center center fixed; 
   background-size: cover;
   margin: 0;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -75,7 +75,7 @@ body {
 
 .formdiv{
   border-radius: 40px;
-  background-color: white;
+  background-color: #282c34;
   opacity: 0.9;
   display: flex;
   flex-direction: column;
@@ -92,6 +92,7 @@ body {
   padding-bottom: 30px;
   gap: 4px;
   transition: 1s;
+  color: white;
 }
 
 .formdiv input:hover{
@@ -161,8 +162,9 @@ body {
   width: 500px;
   align-items: center;
   border-radius: 20px;
-  background-color: salmon;
+  background-color: #282c34;
   transition: 0.3s;
+  color: white;
 
 }
 
@@ -180,29 +182,16 @@ body {
 
 .profilediv{
   background-color: #282c34;
-  margin-left: 20%;
-  margin-right: 20%;
   margin-top: 30px;
-  position: relative;
-  height: 600px;
+  height: 70%;
   border-radius: 20px;
+  height: 20%;
+  width: 40%;
 }
 
-.profileimg{
-  overflow: hidden;
-  width: 50%;
-  aspect-ratio: 16/9;
-  height: 100%;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
 
-.profileul{
-  position: absolute;
-  left: 50%;
-  top: -12%;
-  list-style-type: none;
-}
+
+
 
 .profileLink{
   font-size: 60px;
@@ -213,6 +202,7 @@ body {
   gap: 30px;
   border: none;
   background-color:inherit;
+  display: inline-block;
 
 }
 
@@ -272,20 +262,51 @@ body {
 }
 
 .formdivedit{
-  border-radius: 40px;
   background-color: white;
   opacity: 0.9;
   display: flex;
   flex-direction: column;
   justify-content:space-evenly;
   align-items: center;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 10%;
-  padding-top: 30px;
   padding-bottom: 30px;
   gap: 4px;
   transition: 1s;
-  width: 500px;
+  width: 100%;
+  height: 100%;
+}
+
+.imagediv{
   height: 50%;
+  width: 100%;
+}
+
+.profileimg{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.infodiv{
+  height: 100%;
+  width: 100%;
+}
+
+.profilecontainer{
+  display: flex;
+  justify-content: center;
+}
+
+.buttonsdiv{
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: center;
+}
+
+.closebutton{
+  position: relative;
+  left: 45%;
+  top: 10px;
 }

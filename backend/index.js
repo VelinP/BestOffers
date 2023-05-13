@@ -28,6 +28,7 @@ app.post('/register', maincontroller.registerpost);
 app.post('/login', maincontroller.loginpost);
 app.post('/create', maincontroller.createpost);
 
+app.put('/profile/:useremail/edit', maincontroller.putEdit)
 
 databaseinit().then(()=> app.listen(port, ()=> {console.log(`Server is up and running on port ${port}`)}));
 

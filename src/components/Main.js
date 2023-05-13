@@ -15,7 +15,6 @@ export const Main = () =>{
   
     return(
       <>
-      <h1 className='centeredh1'>Registered users:</h1>
       <div className="maincontentdiv">
         
         <ul className='mainuls'>
