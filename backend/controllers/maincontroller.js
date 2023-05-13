@@ -94,3 +94,9 @@ exports.putEdit = async(req,res) =>{
         console.log(e)
     }
 }
+
+exports.getAllCards = async(req,res) =>{
+    const alloffers = await Offer.find().lean()
+    console.log(alloffers)
+    res.send({alloffers})
+}

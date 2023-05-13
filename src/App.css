@@ -310,3 +310,16 @@ body {
   left: 45%;
   top: 10px;
 }
+
+/* OFFERS */
+
+
+.offersdiv{
+  border: solid black 3px;
+  display: flex;
+  justify-content: center;
+  background-color: salmon;
+}
+
+
+/* OFFERS */
