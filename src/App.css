@@ -318,7 +318,37 @@ body {
   display: flex;
   justify-content: center;
   background-color: salmon;
+  align-items: center;
+ 
+  
 }
 
 
 /* OFFERS */
+
+.maindetails{
+  display: flex;
+  justify-content: center;
+  color: orange;
+  
+  padding-top: 40px;
+}
+
+.detailsDiv{
+  background-color: #07245f;
+  display: flex;
+  border-radius: 10px;
+  
+}
+
+.descdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px;
+}
+
+.offerimg{
+  border-radius: 10px;
+}

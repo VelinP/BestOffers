@@ -21,15 +21,17 @@ export const Details = () =>{
                 
                 
                 <div className="descdiv">
-                    <h1 id="desch4" >Offer:{currentDetails?.offer?.offername}</h1>
-                    <p id="offertype" >Type:{currentDetails?.offer?.type} </p>
+                    <h1 id="desch4" >Offer: {currentDetails?.offer?.offername}</h1>
+                        
+                    <p id="offertype" >Type: {currentDetails?.offer?.type} </p>
                     <p id="location" >Location: {currentDetails?.offer?.location}</p>
                     <p id="typedesc" >Price: {currentDetails.offer?.price}</p>
                     
 
 
 
-                    <h1 id="offerdescription">Description:{currentDetails.offer?.description}</h1>
+                    <h1 id="offerdescription">Description:</h1>
+                    <p>{currentDetails.offer?.description}</p>
                     
                     <div className="descriptionDiv">
                     <p id="detailsdesc"></p>
