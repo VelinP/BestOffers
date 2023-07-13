@@ -158,7 +158,7 @@ body {
 }
 
 .homepagecardheader{
-  height: 500px;
+  height: 600px;
   width: 500px;
   align-items: center;
   border-radius: 20px;
@@ -169,7 +169,7 @@ body {
 }
 
 .homepagecardheader:hover{
-  box-shadow: 0 0 30px wheat,0 0 30px red;
+  box-shadow: 0 0 30px wheat,0 0 30px #07245f;
 
 }
 
@@ -257,8 +257,7 @@ body {
 }
 
 .submitbuttonedit{
-  margin-top: -14px;
-
+  text-decoration: none;
 }
 
 .formdivedit{

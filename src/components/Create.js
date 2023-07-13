@@ -11,7 +11,7 @@ export const Create = () =>{
     const onsubmit =(event) =>{
         event.preventDefault();
         const { offername ,location, type, price, picture , description} = Object.fromEntries(new FormData(event.target));
-        create(offername ,location, type, price, picture , description, id).then(()=> navigate('/offers'));
+        create(offername ,location, type, price, picture , description, id).then(()=> navigate('/alloffers'));
     }
     
     
