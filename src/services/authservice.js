@@ -47,3 +47,13 @@ export const edit = async (email, picture, password,id) =>{
 
 }
 }
+
+export const getDetails = async (id) =>{
+    try{
+        return request.get(`http://localhost:4000/offers/${id}/details`, id)
+        
+    }catch(e){
+        console.log(e)
+    }
+    
+}

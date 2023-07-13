@@ -14,6 +14,7 @@ import { ProfileCards } from './components/ProfileCards';
 import { Nopage } from './components/Nopage';
 import { PrivateRoute } from './components/PrivateRoute';
 import { AllOffers } from './components/AllOffers';
+import { Details } from './components/Details';
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
       <Route path="/register" element={<Register/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/404" element={<Nopage/>}/>
+      <Route path="/offers/:id/details" element={<Details/>}/>
     </Routes>
 
     </authContext.Provider>

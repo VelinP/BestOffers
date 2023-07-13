@@ -100,3 +100,15 @@ exports.getAllCards = async(req,res) =>{
     console.log(alloffers)
     res.send({alloffers})
 }
+
+exports.getDetails = async(req,res) =>{
+    try{
+        const id = req.params.id
+        const offer = await Offer.findById(id).lean()
+        res.send({offer})
+    }catch(e){
+        console.log(e)
+    }
+
+
+}
