@@ -1,6 +1,6 @@
 
 body { 
-  background: url("https://static.vecteezy.com/system/resources/previews/001/542/636/original/fashion-clothes-store-background-free-vector.jpg") no-repeat center center fixed; 
+  background: url("https://foundr.com/wp-content/uploads/2023/04/Ecommerce-tips-2023.jpg.webp") no-repeat center center fixed; 
   background-size: cover;
   margin: 0;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -323,21 +323,33 @@ body {
   
 }
 
+.nopagediv{
+  height:95vh;
+}
+
+.nopageimg{
+  width: 100%;
+  height: 100%;
+}
 
 /* OFFERS */
 
 .maindetails{
   display: flex;
   justify-content: center;
-  color: orange;
-  
+  color: white;
   padding-top: 40px;
 }
 
 .detailsDiv{
-  background-color: #07245f;
+  background-color: #282c34;
   display: flex;
   border-radius: 10px;
+  width: 1500px;
+  max-width: 1500px;
+  
+
+  height: 750px;
   
 }
 
@@ -346,9 +358,27 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 100px;
+  margin: 70px;
 }
 
 .offerimg{
   border-radius: 10px;
+  width: 70%;
+  
+  
+}
+
+/* homediv */
+
+.homecarddiv{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  /* background-image: url(https://img.rawpixel.com/private/static/images/website/2022-05/px675340-image-kwvxhqn7.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=54fadfe351352e386fb4da27fb220939); */
+}
+
+.mainheader{
+  text-align: center;
 }

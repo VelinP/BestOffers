@@ -9,6 +9,12 @@ export const get = async (url) =>{
     }
 }
 
+export const getthree = async (url) =>{
+    const data = await get("http://localhost:4000/alloffers");
+    const spliceddata = data.alloffers.splice(-3)
+    return spliceddata
+}
+
 export const post = async(url,data ) =>{
     try{
         const readydata = await fetch(url, {method:'POST', headers:{'Content-Type': "application/json"}, body: JSON.stringify(data)})

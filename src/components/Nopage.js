@@ -1,7 +1,8 @@
 export const Nopage = () =>{
     return(
-        <img className="nopageimg" src={"https://w3-lab.com/wp-content/uploads/2022/09/FOR-WEB-404-astronaut.jpg"} alt='nothing'></img>
-
+        <div className="nopagediv">
+            <img className="nopageimg" src={"https://cdnwebsite.databox.com/wp-content/uploads/2021/10/28071344/google-analytics-404-report.jpg"} alt='nothing'></img>
+        </div>
     )
 }
 
