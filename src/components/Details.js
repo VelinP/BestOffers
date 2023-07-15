@@ -21,9 +21,10 @@ export const Details = () =>{
                 
                 
                 <div className="descdiv">
-                    <h1 id="desch4" >Offer: {currentDetails?.offer?.offername}</h1>
-                        
-                    <p id="offertype" >Type: {currentDetails?.offer?.type} </p>
+                    
+                    <h1 style={{justifyContent:"center", display:"flex"}}>{currentDetails?.offer?.offername}</h1>
+
+                    <p id="offertype"  >Type: {currentDetails?.offer?.type} </p>
                     <p id="location" >Location: {currentDetails?.offer?.location}</p>
                     <p id="typedesc" >Price: {currentDetails.offer?.price}</p>
                     
