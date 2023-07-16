@@ -7,7 +7,7 @@ body {
 }
 
 .mainnav{
-  background-color: #282c34;
+  /* background-color: #282c34; */
   /* background-image: linear-gradient(to left top,rgb(157, 69, 2),rgb(255, 91, 42)); */
 
   display: flex;
@@ -29,7 +29,7 @@ body {
 }
 
 .mainul a:hover{
-  box-shadow: 2px 2px 2px 2px orange;
+  box-shadow: 2px 2px 2px 2px #07245f;
   /* border: solid red 1px; */
   background-color: orange;
   transition: 0.3s;
@@ -162,7 +162,7 @@ body {
   width: 500px;
   align-items: center;
   border-radius: 20px;
-  background-color: #282c34;
+  background-color:#07245f;
   transition: 0.3s;
   color: white;
 
@@ -342,7 +342,7 @@ body {
 }
 
 .detailsDiv{
-  background-color: #282c34;
+  background-color:#07245f;
   display: flex;
   border-radius: 10px;
   width: 1500px;
