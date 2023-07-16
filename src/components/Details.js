@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import { getDetails } from "../services/authservice";
+import { useNavigate } from 'react-router-dom'
+import * as auth from '../services/authservice.js'
+import { Link } from "react-router-dom";
 
 export const Details = () =>{
-    
-    
     const [currentDetails , setCurrentDetails] = useState({})
     const {id} = useParams() 
     useEffect(()=> {getDetails(id).then(data=> setCurrentDetails(data))},[])
-     
-    console.log(currentDetails)
-
+ 
 
     
     return(
@@ -21,7 +20,12 @@ export const Details = () =>{
                 
                 
                 <div className="descdiv">
-                    
+                    <div className="descbuttonsdiv">
+                        <button>Edit</button>
+                        {/* <button onClick={deletefunc}>Delete</button> */}
+                        <Link to={`http://localhost:4000/offers/${id}/details/delete`}><button>Delete</button></Link>
+                        
+                    </div>
                     <h1 style={{justifyContent:"center", display:"flex"}}>{currentDetails?.offer?.offername}</h1>
 
                     <p id="offertype"  >Type: {currentDetails?.offer?.type} </p>

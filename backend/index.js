@@ -17,6 +17,7 @@ app.get('/profile/:useremail', maincontroller.profilegetcards)
 app.get('/logout', maincontroller.getLogout)
 app.get('/alloffers', maincontroller.getAllCards)
 app.get('/offers/:id/details', maincontroller.getDetails)
+app.get('/offers/:id/details/delete' , maincontroller.getDel)
 
 app.post('/register', maincontroller.registerpost);
 app.post('/login', maincontroller.loginpost);

@@ -15,7 +15,7 @@ import { Nopage } from './components/Nopage';
 import { PrivateRoute } from './components/PrivateRoute';
 import { AllOffers } from './components/AllOffers';
 import { Details } from './components/Details';
-
+import { Delete } from './components/Delete';
 
 function App() {
   const [authenticate, setauthenticate] = useLocalStorage('auth',{})
@@ -51,6 +51,7 @@ function App() {
         <Route path="/profile/:useremail/offers" element={<ProfileCards/>}/>
         <Route path="/create" element ={<Create/>}/>
         <Route path="/logout" element={<Logout/>}/>
+        <Route path="/offers/:id/details/delete" element={<Delete/>}/>
       </Route>
        {/* Guarded routes */}
 

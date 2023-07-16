@@ -57,3 +57,11 @@ export const getDetails = async (id) =>{
     }
     
 }
+
+export const deleteOne = async(id) =>{
+    try{
+        return request.deletefunc(`http://localhost:4000/offers/${id}/details/delete`)
+    }catch(err){
+        console.log(err)
+    }
+}

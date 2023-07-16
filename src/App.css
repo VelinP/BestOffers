@@ -95,10 +95,10 @@ body {
   color: white;
 }
 
-.formdiv input:hover{
+/* .formdiv input:hover{
   border: solid black 2px;
   font-weight:bold;
-}
+} */
 
 .formdiv textarea:hover{
   border: solid black 1px;
@@ -381,4 +381,10 @@ body {
 
 .mainheader{
   text-align: center;
+}
+
+.descbuttonsdiv{
+  display: flex;
+  justify-content: center;
+  
 }

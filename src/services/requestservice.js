@@ -51,3 +51,11 @@ export const put = async(url,data) =>{
     const readydata = await fetch(url, {method:'PUT', headers:{'Content-Type': "application/json", 'X-Authorization': token}, body: JSON.stringify(data)})
     return readydata.json()
 }
+
+export const deletefunc = async(url) =>{
+    const user = getUser()
+    const token = user?.token
+    debugger;
+    const readydata = await fetch(url, {method:'DELETE', headers:{'Content-Type': "application/json", 'X-Authorization': token}})
+    return readydata.json()
+}
