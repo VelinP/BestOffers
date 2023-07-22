@@ -1,26 +1,23 @@
 
 body { 
-  background: url("https://foundr.com/wp-content/uploads/2023/04/Ecommerce-tips-2023.jpg.webp") no-repeat center center fixed; 
-  background-size: cover;
   margin: 0;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .mainnav{
-  /* background-color: #282c34; */
-  /* background-image: linear-gradient(to left top,rgb(157, 69, 2),rgb(255, 91, 42)); */
-
   display: flex;
   flex-direction: column;
   opacity: 0.90;
   height: 70px;
-
+  background-color: rgb(244, 236, 236);
+  box-shadow: 3px 3px 3px black;
+  text-shadow: 1px 1px 2px pink;
  
   
 }
 
 .mainul a{
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 800;
   padding-top: 10px;
@@ -30,7 +27,6 @@ body {
 
 .mainul a:hover{
   box-shadow: 2px 2px 2px 2px #07245f;
-  /* border: solid red 1px; */
   background-color: orange;
   transition: 0.3s;
   border-radius: 10px;
@@ -387,4 +383,96 @@ body {
   display: flex;
   justify-content: center;
   
+}
+
+
+/* NEW */
+
+.entry{
+
+  width: 80%;
+  min-height: 40em;
+  margin: auto;
+
+  background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVvcGxlJTIwd29ya2luZ3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-shadow: 1px 1px 2px pink;
+  
+
+}
+
+.entryinfodiv{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  background-color: white;
+  color: black;
+  position: relative;
+  top: 510px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+}
+
+
+.alloffersmain a{
+  color: black;
+  text-decoration: none;
+  font-weight: 800;
+  padding-top: 10px;
+
+  border-radius: 10px;
+  padding: 10px;
+  border: solid rgb(209, 202, 202);
+  position: relative;
+  bottom: 90px;
+  left: 600px;
+  border-radius: 20px;
+}
+
+
+
+
+.alloffersmain a:hover{
+  box-shadow: 2px 2px 2px 2px #07245f;
+  background-color: orange;
+  transition: 0.3s;
+  border-radius: 10px;
+  padding: 10px;
+
+}
+
+.entryabout{
+  width: 80%;
+  min-height: 20em;
+  margin: auto;
+  padding-top: 50px;
+  text-shadow: 1px 1px 2px pink;
+  display: flex;
+
+  
+}
+
+.websiteabout{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.circlediv{
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: solid black;
+  align-items: center;
+  position:relative;
+  left: 1100px;
+  bottom: 100px;
+  padding: 20px;
 }

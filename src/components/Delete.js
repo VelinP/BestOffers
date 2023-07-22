@@ -7,6 +7,7 @@ export const Delete = () =>{
     const {id} = useParams()
     const navigate = useNavigate();
 
-    useEffect(()=>{auth.deleteOne(id).then(()=> {navigate('/alloffers')})})
+    
+    useEffect(()=>{auth.deleteOne(id).then(()=> navigate('/'))})
     return(null)
 }

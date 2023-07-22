@@ -116,5 +116,6 @@ exports.getDetails = async(req,res) =>{
 exports.getDel = async (req,res) =>{
     const id = req.params.id
     await Offer.findByIdAndDelete(id)
+    res.sendStatus(404);
     
 }
