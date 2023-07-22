@@ -16,8 +16,8 @@ export const Register = () =>{
 
 
     return(
-        <div>
-
+        <div className='creatdiv'>
+        
         <form id="register" onSubmit={onsubmit}>
             <div  className="formdiv">
                 <h1>Register</h1>

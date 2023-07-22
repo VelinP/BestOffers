@@ -6,19 +6,26 @@ export const AllOffers = () =>{
     
     const [offers, setoffers] = useState([])
     useEffect(()=> {request.get("http://localhost:4000/alloffers").then((data) => {setoffers(data)})},[])
-    
+    console.log(offers.alloffers)
     return (
 
+        <>
+        
+        
+            
+        {offers.alloffers?.length > 0 ? 
         <div className="profilegriddiv">
-
-        {
-            // offers.alloffers?.map(card => console.log(card))
-        }        
-        {offers.alloffers?.map(card => <Card info = {card}key ={card._id}/>)}
-
+            
+        {offers.alloffers?.map(card => <Card info = {card}key ={card._id}/>) }
         </div>
+        :
+        <div className='alloffersnoffers'> <h1>No offers currently</h1> </div>
+        }
 
+        
+        </>
 
 
     )
 }
+

@@ -60,7 +60,7 @@ export const Main = () =>{
           
         <div className='homediv'>
           <div className='homecarddiv'>
-            {three.length>0 ? three?.map( item => <Card info = {item}key ={item._id}/>) : <h1>There are no offers currently</h1>}
+            {three.length>0 ? three?.map( item => <Card info = {item}key ={item._id}/>) : <></>}
         </div>
 
      </div> 

@@ -17,34 +17,34 @@ export const Login = () =>{
     
     
     return(
-        <div>
+        <div className='creatdiv'>
+              
+                <form id="login" onSubmit={onsubmit}>
+                    <div  className="formdiv">
+                        <h1>Login</h1>
+                        <label htmlFor="email">Email:</label>
+                        <input className="buttons"
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Nudash@abv.bg"
+                        />
 
-        <form id="login" onSubmit={onsubmit}>
-            <div  className="formdiv">
-                <h1>Login</h1>
-                <label htmlFor="email">Email:</label>
-                <input className="buttons"
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Nudash@abv.bg"
-                />
+                        
+                        <label htmlFor="pass">Password:</label>
+                        <input className="buttons" type="password" name="password" id="register-password" placeholder='Password'/>
+                        
+                        <input className="submitbutton" type="submit" value="Login" />
 
-                
-                <label htmlFor="pass">Password:</label>
-                <input className="buttons" type="password" name="password" id="register-password" placeholder='Password'/>
-                
-                <input className="submitbutton" type="submit" value="Login" />
+                        <p className="field">
+                            <span>
+                            If you dont have profile click <a className="spanremove"  href="/register">here</a>
+                            </span>
+                        </p>
+                    </div>
+                </form>
 
-                <p className="field">
-                    <span>
-                    If you dont have profile click <a className="spanremove"  href="/register">here</a>
-                    </span>
-                </p>
             </div>
-        </form>
-
-        </div>
 
 
     )
