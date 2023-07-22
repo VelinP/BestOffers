@@ -69,27 +69,7 @@ body {
   
 }
 
-.formdiv{
-  border-radius: 40px;
-  background-color: #282c34;
-  opacity: 0.9;
-  display: flex;
-  flex-direction: column;
-  justify-content:space-evenly;
-  align-items: center;
-  width: auto;
-  margin-left: 35%;
-  margin-right: 35%;
-  margin-top: 50px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 10%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  gap: 4px;
-  transition: 1s;
-  color: white;
-}
+
 
 /* .formdiv input:hover{
   border: solid black 2px;
@@ -372,7 +352,6 @@ body {
   justify-content: center;
   align-items: center;
   padding-top: 60px;
-  /* background-image: url(https://img.rawpixel.com/private/static/images/website/2022-05/px675340-image-kwvxhqn7.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=54fadfe351352e386fb4da27fb220939); */
 }
 
 .mainheader{
@@ -486,6 +465,7 @@ body {
   text-shadow: 1px 1px 2px pink;
   display: flex;
   padding: 20px;
+  margin-bottom: 100px;
 }
 
 /*footer*/
@@ -665,6 +645,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-shadow: 1px 1px 2px pink;
+
 }
 
 
@@ -686,5 +668,37 @@ section {
   .footer-distributed .footer-center i{
     margin-left: 0;
   }
+
+}
+
+.creatdiv{
+  width: 50%;
+  margin: auto;
+  background-image: url('https://media.istockphoto.com/id/1312490875/video/man-scanning-product-using-smartphone-in-the-supermarket.jpg?s=640x640&k=20&c=sa4yOsR4ctn1-Oy2shDs-iN5qgMhqXqq0gYMlILs7Dw=');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-shadow: 1px 1px 2px pink;
+  min-height: 57em;
+
+}
+
+
+.formdiv{
+  background-color: #282c34;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+  width: auto;
+
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 30px;
+  gap: 4px;
+  transition: 1s;
+  color: white;
+  min-height: 57em;
 
 }

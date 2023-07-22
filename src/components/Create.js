@@ -17,7 +17,7 @@ export const Create = () =>{
     
     return( 
 
-    <div>
+    <div className="creatdiv">
 
         <form id="create" onSubmit={onsubmit}>
             <div  className="formdiv">
