@@ -9,11 +9,12 @@ import { Footer } from './Footer.js'
 export const Main = () =>{
     const [three, setThree] = useState([])
     const [boolspinner,setboolspinner] = useState(true)
-    const [offersnumber , setoffersnumber] = useState(0)
+    const [offersnumber , setoffersnumber] = useState(false)
 
     useEffect(()=> {request.getthree("http://localhost:4000/alloffers").then((data) => {setThree(data)})},[])
     useEffect(()=> {request.get("http://localhost:4000/alloffers").then((data) => {setoffersnumber(data)})},[])
     
+    console.log(offersnumber)
 
     return(
       <>
@@ -36,6 +37,8 @@ export const Main = () =>{
 
       <div className='entryabout'>
         
+
+
         <div className='websiteabout'>
           
           <h1>About BestOffers</h1>
@@ -45,7 +48,10 @@ export const Main = () =>{
           </div>
 
           <div className='circlediv'>
-            <h1>{offersnumber.alloffers?.length}</h1>
+            {offersnumber 
+            ? <h1>0</h1>
+            :
+            <h1>{offersnumber?.alloffers?.length}</h1>}
             offer/s currently available.
           </div>
         </div>

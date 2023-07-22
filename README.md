@@ -9,3 +9,9 @@ It features a selfmade backend which i use to handle the server side, and suppor
     2. Login / register functionality
     3. Saves all content(users , offers) on a database(MongoDB)
     4. Has Route guards
+
+
+How to use:
+
+1. Open a terminal in backend and run npm start
+2. Open a terminal in SRC and run npm start
