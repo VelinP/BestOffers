@@ -21,7 +21,7 @@ export const Footer = () =>{
 
         <div>
           <i className="fa fa-phone"></i>
-          <p>+359884690940</p>
+          <p>+359 884 690940</p>
         </div>
 
         <div>

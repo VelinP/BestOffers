@@ -27,6 +27,8 @@ export const Main = () =>{
             
             <div className='alloffersmain'>
             <Link to={'/alloffers'}>Check out our offers</Link>
+            <Link to={'/register'}>Join us</Link>
+
             </div>
         </div>
 
