@@ -52,7 +52,7 @@ export const Main = () =>{
       </div>
 
       <div className='threeholderdiv'>
-      {three.length > 0 ? <h1 className='mainheader'>Latest offers</h1> : <h1>No offers currently</h1>}
+      {three.length > 0 ? <h1 className='mainheader'>Most Recent Offers</h1> : <h1>No offers currently</h1>}
 
       </div>
 

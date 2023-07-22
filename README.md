@@ -1,5 +1,5 @@
 This is a self-made ReactJS project that works with a back-end system with ExpressJS and MongoDB.
-
+It is intended to be a trading website where people can post offers and other people can browse and interact with them.
 
 It is intended mostly for me to practise my backend skills along with frontend, as well as something i can use to show i have experience working with these technologies.
 
