@@ -4,6 +4,7 @@ import { HomeComp } from './Homecompo.js'
 import { Spinner } from './Spinner.js'
 import { Card } from './Card.js'
 import { Link } from 'react-router-dom'
+import { Footer } from './Footer.js'
 
 export const Main = () =>{
     const [three, setThree] = useState([])
@@ -50,11 +51,14 @@ export const Main = () =>{
 
       </div>
 
+      <div className='threeholderdiv'>
+      {three.length > 0 ? <h1 className='mainheader'>Latest offers</h1> : <h1>No offers currently</h1>}
+
+      </div>
 
       <div className='newestthree'>
           
         <div className='homediv'>
-          {three.length > 0 ? <h1 className='mainheader'>Latest offers</h1> : <h1>No offers currently</h1>}
           <div className='homecarddiv'>
             {three.length>0 ? three?.map( item => <Card info = {item}key ={item._id}/>) : <h1>There are no offers currently</h1>}
         </div>
@@ -62,7 +66,7 @@ export const Main = () =>{
      </div> 
 
       </div>
-
+      <Footer/>
       </>
       
     )

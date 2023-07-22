@@ -64,7 +64,6 @@ function App() {
     </Routes>
 
     </authContext.Provider>
-    <Footer/>
 
 
     </div>
