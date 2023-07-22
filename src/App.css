@@ -71,11 +71,6 @@ body {
 
 
 
-/* .formdiv input:hover{
-  border: solid black 2px;
-  font-weight:bold;
-} */
-
 .formdiv textarea:hover{
   border: solid black 1px;
   font-weight:bold;
@@ -325,7 +320,8 @@ body {
   border-radius: 10px;
   width: 1500px;
   max-width: 1500px;
-  
+  box-shadow: 5px 10px 18px #888888;
+
 
   height: 750px;
   
@@ -358,6 +354,7 @@ body {
 
 .mainheader{
   text-align: center;
+  
 }
 
 .descbuttonsdiv{
@@ -405,7 +402,7 @@ body {
   text-decoration: none;
   font-weight: 800;
   padding-top: 10px;
-
+  background-color: rgb(117, 238, 117);
   border-radius: 10px;
   padding: 10px;
   border: solid rgb(209, 202, 202);
@@ -420,16 +417,15 @@ body {
 
 .alloffersmain a:hover{
   box-shadow: 2px 2px 2px 2px #07245f;
-  background-color: orange;
+  background-color: rgb(15, 246, 23);
   transition: 0.3s;
-  border-radius: 10px;
+  
   padding: 10px;
 
 }
 
 .entryabout{
   width: 80%;
-  min-height: 20em;
   margin: auto;
   padding-top: 50px;
   text-shadow: 1px 1px 2px pink;
@@ -457,6 +453,8 @@ body {
   bottom: 130px;
   padding: 20px;
   box-shadow: 10px 5px 5px rgb(50, 42, 42);
+  box-shadow: 10px 15px 21px #888888;
+  
 }
 
 .newestthree{
@@ -699,6 +697,9 @@ section {
   color: white;
   min-height: 40em;
   padding: 40px;
+  margin-top: 40px;
+  box-shadow: 5px 10px 18px #888888;
+
   
 
 }
