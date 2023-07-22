@@ -51,6 +51,18 @@ export const Main = () =>{
       </div>
 
 
+      <div className='newestthree'>
+          
+        <div className='homediv'>
+          {three.length > 0 ? <h1 className='mainheader'>Latest offers</h1> : <h1>No offers currently</h1>}
+          <div className='homecarddiv'>
+            {three.length>0 ? three?.map( item => <Card info = {item}key ={item._id}/>) : <h1>There are no offers currently</h1>}
+        </div>
+
+     </div> 
+
+      </div>
+
       </>
       
     )
