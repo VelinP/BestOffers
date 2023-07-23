@@ -9,6 +9,12 @@ export const Register = () =>{
         
         e.preventDefault()
         const { email ,picture, password } = Object.fromEntries(new FormData(e.target))
+
+        if(email === "" || password === "" || picture === ""){
+            alert("You have missing fields")
+            return
+        }
+
         request.register(email,picture, password).then(()=> {navigate('/login')})
 
 
