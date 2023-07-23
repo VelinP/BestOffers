@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 
 export const Footer = () =>{
     return(
@@ -44,9 +45,9 @@ export const Footer = () =>{
         
 
         <div className="linksdiv">
-          <Link to={"https://www.facebook.com/velin.porchev/"}><i className="fa fa-facebook">Facebook</i></Link>
-          <Link to={"https://www.linkedin.com/in/velin-porchev-857202283/"}><i className="fa fa-linkedin">LinkedIn</i></Link>
-          <Link to={"https://github.com/VelinP"}><i className="fa fa-github"></i>Github</Link>
+          <Link to={"https://www.facebook.com/velin.porchev/"}><BsFacebook size={'3rem'}/></Link>
+          <Link to={"https://www.linkedin.com/in/velin-porchev-857202283/"}><BsLinkedin size={'3rem'}/></Link>
+          <Link to={"https://github.com/VelinP"}><BsGithub size={'3rem'}/></Link>
         </div>
 
       </div>

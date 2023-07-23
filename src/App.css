@@ -116,6 +116,23 @@ body {
   justify-items: center;
   align-items: center;
   gap: 60px;
+  background-image: url('https://images.pexels.com/photos/3962285/pexels-photo-3962285.jpeg?cs=srgb&dl=pexels-anna-shvets-3962285.jpg&fm=jpg');
+  opacity: 0.9;
+  background-color: #282c34;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  box-shadow: 5px 10px 18px #888888;
+  width: 90%;
+  min-height: 20em;
+  margin: auto;
+  padding-top: 50px;
+  text-shadow: 1px 1px 2px pink;
+  padding: 20px;
+  margin-top: 20pxnpm install react-icons --save
+;
+
 }
 
 
@@ -734,8 +751,8 @@ section {
 .linksdiv{
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  gap: 15px;
 }
 
 .linksdiv a{
