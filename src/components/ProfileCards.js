@@ -3,6 +3,7 @@ import {useState,useEffect} from 'react';
 import * as request from '../services/requestservice.js'
 import { Card } from "./Card";
 import { Spinner } from "./Spinner";
+import { AlloffersRow } from "./AlloffersRow.js";
 
 export const ProfileCards = () =>{
     const {useremail} = useParams()
@@ -15,7 +16,8 @@ export const ProfileCards = () =>{
     return(
         <div className="profilegriddiv">
         {boolspinner && <Spinner/>}
-        {usercards.offers?.map(card => <Card key={card._id} info={card}/>)}
+        {usercards.offers?.map(card => <AlloffersRow key={card._id} info={card}/>)}
         </div>
     )
 }
+
