@@ -40,10 +40,13 @@ export const Main = () =>{
                   <div>Here on BestOffers our goal is to bring an easy and relaxing experience when it comes to buying / selling items.
                   <div> You can register , login , customzie your profile , look at all offers ,and your own specific offers.</div>
                   <div> This website is designed entirely by Velin Porchev of Softuni , and it's intended goal is to represent what i am capable of at my current level.</div>
-                  <h1>Why choose us?</h1>
-                  <div>BestOffers gives you the chance to easily and safely browse offers posted by others.</div>
-                  <div>It is a great way to find what you need, at an affordable price.</div>
-                  <div>Don't hesitate, join us now!</div>
+                  <h1 className='whyjoinush1'>Why choose us?</h1>
+
+                  <div>
+                    <div>BestOffers gives you the chance to easily and safely browse offers posted by others.</div>
+                    <div>It is a great way to find what you need, at an affordable price.</div>
+                    <div>Don't hesitate, join us now!</div>
+                    </div>
 
                   <div className='alloffersmain'>
                       <Link to={'/alloffers'}>Check out our offers</Link>

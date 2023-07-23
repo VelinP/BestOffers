@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import * as request from "../services/requestservice"
 import { Card } from "./Card"
+import { AlloffersRow } from "./AlloffersRow"
 
 export const AllOffers = () =>{
     
@@ -15,7 +16,7 @@ export const AllOffers = () =>{
         {offers.alloffers?.length > 0 ? 
         <div className="profilegriddiv">
             
-        {offers.alloffers?.map(card => <Card info = {card}key ={card._id}/>) }
+        {offers.alloffers?.map(card => <AlloffersRow info = {card}key ={card._id}/>) }
         </div>
         :
         <div className='alloffersnoffers'> <h1>No offers currently</h1> </div>

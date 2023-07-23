@@ -8,15 +8,20 @@ export const Create = () =>{
     const user = getUser()
     const id = user.id
 
+
     const onsubmit =(event) =>{
         event.preventDefault();
         const { offername ,location, type, price, picture , description} = Object.fromEntries(new FormData(event.target));
+        console.log(typeof(price))
+        
+        
+        
         create(offername ,location, type, price, picture , description, id).then(()=> navigate('/alloffers'));
     }
     
     
     return( 
-
+    
     <div className="creatdiv">
 
         <form id="create" onSubmit={onsubmit}>
