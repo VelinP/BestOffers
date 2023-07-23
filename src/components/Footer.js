@@ -11,7 +11,7 @@ export const Footer = () =>{
         <h3>Best<span>Offers</span></h3>
         <p className="footer-company-about">
           <span>About the author</span>
-          Junior Fullstack developer.
+          Junior Fullstack developer just looking for a job.
         </p>
       </div>
 
