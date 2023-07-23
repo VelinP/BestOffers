@@ -6,7 +6,6 @@ export const AllOffers = () =>{
     
     const [offers, setoffers] = useState([])
     useEffect(()=> {request.get("http://localhost:4000/alloffers").then((data) => {setoffers(data)})},[])
-    console.log(offers.alloffers)
     return (
 
         <>

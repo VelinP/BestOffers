@@ -22,7 +22,6 @@ export const Details = () =>{
                 <div className="descdiv">
                     <div className="descbuttonsdiv">
                         <button>Edit</button>
-                        {/* <button onClick={deletefunc}>Delete</button> */}
                         <Link to={`http://localhost:4000/offers/${id}/details/delete`}><button>Delete</button></Link>
                         
                     </div>

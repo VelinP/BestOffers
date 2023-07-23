@@ -4,10 +4,8 @@ import { authContext } from '../contexts/authcontext.js'
 
 
 export const EditForm = (props) =>{
-    console.log(props)
     const { setIsClicked , user, setUser} = props
     const {setauthenticate} = useContext(authContext)
-    console.log(setauthenticate)
 
     const setIsCLickedFalse = () =>{
         setIsClicked(false)

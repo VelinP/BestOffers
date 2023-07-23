@@ -730,3 +730,15 @@ section {
   margin-right: 30%;
   margin-top: 30px;
 }
+
+.linksdiv{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.linksdiv a{
+  color: white;
+  text-decoration: none;
+}

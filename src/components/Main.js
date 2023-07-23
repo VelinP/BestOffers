@@ -14,8 +14,6 @@ export const Main = () =>{
     useEffect(()=> {request.getthree("http://localhost:4000/alloffers").then((data) => {setThree(data)})},[])
     useEffect(()=> {request.get("http://localhost:4000/alloffers").then((data) => {setoffersnumber(data)})},[])
     
-    console.log(offersnumber)
-
     return(
       <>
       <div className='entry'>
@@ -48,10 +46,14 @@ export const Main = () =>{
           </div>
 
           <div className='circlediv'>
-            {offersnumber 
-            ? <h1>0</h1>
+            {
+            
+            offersnumber 
+            ? <h1>{offersnumber?.alloffers?.length}</h1>
             :
-            <h1>{offersnumber?.alloffers?.length}</h1>}
+            <h1>0</h1>
+            
+            }
             offer/s currently available.
           </div>
         </div>
