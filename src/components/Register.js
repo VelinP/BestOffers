@@ -8,10 +8,15 @@ export const Register = () =>{
     const onsubmit = (e) =>{
         
         e.preventDefault()
-        const { email ,picture, password } = Object.fromEntries(new FormData(e.target))
+        const { email ,picture, password, repass } = Object.fromEntries(new FormData(e.target))
 
-        if(email === "" || password === "" || picture === ""){
+        if(email === "" || password === "" || picture === "" || repass === ""){
             alert("You have missing fields")
+            return
+        }
+
+        if(password != repass){
+            alert("Passwords must be identical")
             return
         }
 
