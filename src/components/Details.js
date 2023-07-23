@@ -9,7 +9,7 @@ export const Details = () =>{
     const [currentDetails , setCurrentDetails] = useState({})
     const {id} = useParams() 
     useEffect(()=> {getDetails(id).then(data=> setCurrentDetails(data))},[])
- 
+    console.log(currentDetails)
 
     
     return(
