@@ -402,7 +402,7 @@ body {
 .entryinfodiv{
   display: inline-flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   
   background-color: white;
   color: black;
@@ -451,6 +451,7 @@ body {
   text-shadow: 1px 1px 2px pink;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   
 }
@@ -459,6 +460,7 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
+  padding-top: 80px;
   
   
 }
@@ -474,8 +476,8 @@ body {
   border: solid black;
   align-items: center;
   position:relative;
-  left: 1100px;
-  bottom: 250px;
+  left: 650px;
+  bottom: 180px;
   padding: 20px;
   box-shadow: 10px 5px 5px rgb(50, 42, 42);
   box-shadow: 10px 15px 21px #888888;
@@ -491,6 +493,7 @@ body {
   display: flex;
   padding: 20px;
   margin-bottom: 100px;
+  justify-content: center;
   
 }
 

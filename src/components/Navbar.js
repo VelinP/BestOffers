@@ -19,20 +19,23 @@ export const Navbar = (props)=>{
         <>
         <img className="detailsimg" src={user?.picture} alt="nothing"/>
         <Link to={`/profile/${user.email}`}>Welcome, {user.email}</Link>
-        <Link to ="/"><FaHome size={'1.4rem'}/></Link>
-        <Link to ="/create">Create</Link>
-        <Link to ="/alloffers">All Offers</Link>
         <Link to ="/logout">Logout</Link>
+        <Link to ="/alloffers">All Offers</Link>
+
+        <Link to ="/create">Create</Link>
+        <Link to ="/"><FaHome size={'1.4rem'}/></Link>
+
         
 
  
         </>
         : 
         <>
-        <Link to ="/"><FaHome size={'1.4rem'}/></Link>
         <Link to ="/login">Login</Link>
         <Link to ="/register">Register</Link>
         <Link to ="/alloffers">All Offers</Link>
+        <Link to ="/"><FaHome size={'1.4rem'}/></Link>
+
         </>
         } 
          
