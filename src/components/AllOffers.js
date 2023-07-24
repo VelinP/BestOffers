@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import * as request from "../services/requestservice"
 import { Card } from "./Card"
 import { AlloffersRow } from "./AlloffersRow"
+import { Footer } from "./Footer"
 
 export const AllOffers = () =>{
     
@@ -22,7 +23,7 @@ export const AllOffers = () =>{
         <div className='alloffersnoffers'> <h1>No offers currently</h1> </div>
         }
 
-        
+        <Footer/>
         </>
 
 

@@ -16,6 +16,8 @@ import { PrivateRoute } from './components/PrivateRoute';
 import { AllOffers } from './components/AllOffers';
 import { Details } from './components/Details';
 import { Delete } from './components/Delete';
+import { Contactus } from './components/Contactus';
+import { Successfullysent } from './components/Successfullysent';
 
 function App() {
   const [authenticate, setauthenticate] = useLocalStorage('auth',{})
@@ -61,8 +63,12 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/404" element={<Nopage/>}/>
       <Route path="/offers/:id/details" element={<Details/>}/>
-    </Routes>
+      {/* <Route path="/contactus" element= {<Contactus/>}/>     */}
+      <Route path="/success" element= {<Successfullysent/>}/>    
 
+
+      </Routes>
+    
     </authContext.Provider>
 
 

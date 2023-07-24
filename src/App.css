@@ -132,6 +132,7 @@ body {
   padding: 20px;
   margin-top: 20px;
   border-radius: 20px;
+  margin-bottom: 60px;
 
 }
 
@@ -140,22 +141,26 @@ body {
 .homepagecardimg{
   height: 80%;
   width: 100%;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
 
 }
 
 .homepagecardheader{
-  height: 600px;
-  width: 500px;
+  height: 450px;
+  width: 450px;
   align-items: center;
   /* border-radius: 20px; */
   background-color: rgb(244, 236, 236);
   transition: 0.3s;
   text-shadow: 1px 1px 2px pink;
+  border-radius: 10px;
 
 
 }
+
+
 
 .homepagecardheader:hover{
   box-shadow: 0 0 30px wheat,0 0 30px #07245f;
@@ -396,6 +401,7 @@ body {
   background-position: center;
   text-shadow: 1px 1px 2px pink;
   
+  
 
 }
 
@@ -408,7 +414,7 @@ body {
   color: black;
   position: relative;
   top: 510px;
-  padding-top: 10px;
+  padding-top: 3px;
   padding-right: 10px;
   padding-bottom: 10px;
   
@@ -822,4 +828,44 @@ section {
 
 .alloffersrowmaindiv img{
   width: 100%;
+}
+
+
+.contactinfodiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 5px 10px 18px #888888;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-radius: 20px;
+}
+
+.contactformdiv{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 40px;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  padding: 50px;
+
+}
+
+.contactformdivcontainer{
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #888888;
+
+}
+
+.successfuldiv{
+  display: flex;
+  justify-content: center;
 }

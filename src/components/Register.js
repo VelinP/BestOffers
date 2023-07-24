@@ -1,6 +1,6 @@
 import * as request from '../services/authservice.js'
 import { useNavigate } from 'react-router-dom'
-
+import { Footer } from './Footer.js'
 
 export const Register = () =>{
     const navigate = useNavigate()
@@ -27,6 +27,8 @@ export const Register = () =>{
 
 
     return(
+
+        <>
         <div className='creatdiv'>
         
         <form id="register" onSubmit={onsubmit}>
@@ -61,7 +63,9 @@ export const Register = () =>{
                 </p>
             </div>
         </form>
-
+       
         </div>
+       
+        </>
     )
 }
