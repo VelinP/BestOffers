@@ -814,7 +814,7 @@ section {
   box-shadow: 5px 10px 18px #888888;
   min-width: 1280px;
   max-width: 1280px;
-  min-height: 700px;
+  min-height: 600px;
 }
 
 
@@ -833,6 +833,8 @@ section {
 
 .alloffersrowmaindiv img{
   width: 100%;
+  max-height: 600px;
+
 }
 
 
