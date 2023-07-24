@@ -1,8 +1,9 @@
 export const Nopage = () =>{
     return(
-        <div className="nopagediv">
-            <img className="nopageimg" src={"https://cdnwebsite.databox.com/wp-content/uploads/2021/10/28071344/google-analytics-404-report.jpg"} alt='nothing'></img>
+        <div className="successfuldiv">
+            <img src={"https://media.licdn.com/dms/image/C5612AQEPYce5KpNLyg/article-cover_image-shrink_720_1280/0/1551659700811?e=2147483647&v=beta&t=O9mBMiF-V12jCRJwaBNDWLKNL8cku2QSoCXtKP3vCHg"} alt="nothing"></img>
         </div>
+
     )
 }
 
