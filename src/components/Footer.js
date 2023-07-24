@@ -31,7 +31,7 @@ export const Footer = () =>{
 
         <div>
           <i className="fa fa-envelope"></i>
-          <p><a href="mailto:support@company.com">velinporchev@gmail.com</a></p>
+          <p><a>velinporchev@gmail.com</a></p>
         </div>
 
         
