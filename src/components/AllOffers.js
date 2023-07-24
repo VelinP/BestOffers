@@ -23,7 +23,7 @@ export const AllOffers = () =>{
         <div className='alloffersnoffers'> <h1>No offers currently</h1> </div>
         }
 
-        <Footer/>
+        {/* <Footer/> */}
         </>
 
 
