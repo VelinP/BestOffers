@@ -15,3 +15,9 @@ How to use:
 
 1. Open a terminal in backend and run npm start
 2. Open a terminal in SRC and run npm start
+
+Work in progress:
+    
+    1. Updating the visuals of profile
+    2. Adding delete and edit functionality for creators
+    3. Possibly updating the forms visuals
