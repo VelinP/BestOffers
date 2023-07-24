@@ -422,7 +422,6 @@ body {
 
 
 .alloffersmain a{
-  color: black;
   text-decoration: none;
   font-weight: 800;
   padding-top: 10px;
@@ -875,3 +874,4 @@ section {
   display: flex;
   justify-content: center;
 }
+

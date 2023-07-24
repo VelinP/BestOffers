@@ -20,11 +20,12 @@ export const Details = () =>{
                 
                 
                 <div className="descdiv">
-                    <div className="descbuttonsdiv">
+                    {/* <div className="descbuttonsdiv">
                         <button>Edit</button>
                         <Link to={`http://localhost:4000/offers/${id}/details/delete`}><button>Delete</button></Link>
                         
-                    </div>
+                    </div> */}
+
                     <h1 style={{justifyContent:"center", display:"flex"}}>{currentDetails?.offer?.offername}</h1>
 
                     <p id="offertype"  >Type: {currentDetails?.offer?.type} </p>
