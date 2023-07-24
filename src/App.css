@@ -124,7 +124,6 @@ body {
   background-position: center;
   opacity: 0.9;
   box-shadow: 5px 10px 18px #888888;
-  width: 70%;
   min-height: 20em;
   margin: auto;
   padding-top: 50px;
@@ -133,6 +132,7 @@ body {
   margin-top: 20px;
   border-radius: 20px;
   margin-bottom: 60px;
+  width: 70%;
 
 }
 
@@ -812,9 +812,12 @@ section {
 
 .alloffersrowmaindiv{
   box-shadow: 5px 10px 18px #888888;
-  min-width: 1280px;
-  max-width: 1280px;
-  min-height: 600px;
+   /* min-width: 1000px;
+  max-width: 1000px;
+  min-height: 600px; */
+  border-radius: 20px;
+   
+  width: 95%;
 }
 
 
@@ -834,6 +837,10 @@ section {
 .alloffersrowmaindiv img{
   width: 100%;
   max-height: 600px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+
 
 }
 
