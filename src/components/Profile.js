@@ -24,7 +24,7 @@ export const Profile = () =>{
     return (
         
         
-    <div className="profilecontainer">
+    <div className="profilewrapper">
         <div className="profilediv">
             
             <div className="imagediv">

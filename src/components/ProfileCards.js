@@ -35,16 +35,3 @@ export const ProfileCards = () =>{
     )
 }
 
-// {offers?.alloffers?.length > 0 ? 
-//     <div className="profilegriddiv">
-        
-//     {offers?.alloffers?.map(card => <AlloffersRow info = {card}key ={card._id}/>) }
-//     </div>
-//     :
-//     <div className='alloffersnoffers'> <h1>No offers currently</h1> </div>
-//     }
-
-// <div className="profilegriddiv">
-//         {boolspinner && <Spinner/>}
-//         {usercards?.offers?.map(card => <AlloffersRow key={card._id} info={card}/>)}
-//         </div>

@@ -169,36 +169,12 @@ body {
 
 .profileh1{
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
   color: white;
 
 }
 
-.profilediv{
-  background-color: #282c34;
-  margin-top: 30px;
-  height: 70%;
-  border-radius: 20px;
-  height: 20%;
-  width: 40%;
-}
 
-
-
-
-
-.profileLink{
-  font-size: 60px;
-  text-decoration: none;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  border: none;
-  background-color:inherit;
-  display: inline-block;
-
-}
 
 .loader {
   position: fixed;
@@ -270,23 +246,7 @@ body {
   height: 100%;
 }
 
-.imagediv{
-  height: 50%;
-  width: 100%;
-}
 
-.profileimg{
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
-.infodiv{
-  height: 100%;
-  width: 100%;
-}
 
 .profilecontainer{
   display: flex;
@@ -884,3 +844,62 @@ section {
   justify-content: center;
 }
 
+.profilewrapper{
+  margin-top: 100px;
+  justify-items: center;
+  align-items: center;
+  gap: 60px;
+  opacity: 0.9;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 5px 10px 18px #888888;
+  margin: auto;
+  padding-top: 50px;
+  text-shadow: 1px 1px 2px pink;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  width: 80%;
+}
+
+.imagediv{
+  height: 50%;
+  width: 100%;
+}
+
+.profileimg{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 500px;
+
+}
+
+.infodiv{
+  height: 200px;
+
+}
+
+.profilediv{
+  background-color: #282c34;
+  height: 70%;
+  border-radius: 20px;
+}
+
+
+
+
+
+.profileLink{
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color:inherit;
+
+}
