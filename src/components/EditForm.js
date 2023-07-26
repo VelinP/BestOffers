@@ -21,13 +21,13 @@ export const EditForm = (props) =>{
 
 
     return(
-        <div>
+        <>
 
         <form id="edit" onSubmit={onsubmit}>
             
             <div  className="formdivedit">
             <button className="closebutton" onClick={setIsCLickedFalse}>Close</button>
-                <h1>Edit</h1>
+                {/* <h1>Edit</h1> */}
                 {/* <label htmlFor="email">Email:</label>
                 <input className="buttons"
                     type="email"
@@ -54,6 +54,6 @@ export const EditForm = (props) =>{
             </div>
         </form>
 
-        </div>
+        </>
     )
 }
